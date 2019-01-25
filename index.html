@@ -30,11 +30,39 @@
 			},function(){
 				$("#gnb-wrap > nav > ul > li > div").stop().slideUp();
 			});
-			$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
-			
-			$("#a.bx-next").click(function(){
-				$(".main-visual div strong").addClass("fadeInRight animated delay- .5s");
+			$(".bx-next").click(function(){
+				$('.move').hide();
+				$('.move').show();
+				$(".main-visual .move .mv-1").addClass("fadeInRight animated delay-.5s");
+				$(".main-visual .move .mv-2").addClass("fadeInUp animated delay-1s");
 			});
+			$(".bx-prev").click(function(){
+				$('.move').hide();
+				$('.move').show();
+				$(".main-visual .move .mv-1").addClass("fadeInRight animated delay-.5s");
+				$(".main-visual .move .mv-2").addClass("fadeInUp animated delay-1s");
+			});
+			$('#btn-top').css('opacity',0);
+			$(window).on('scroll',function(){
+				var scrollY = window.pageYOffset;
+				console.log(scrollY);
+				if(scrollY>800){
+					$('#btn-top').fadeIn();
+					$('#btn-top').css('opacity',1);
+				}else{
+					$('#btn-top').fadeOut();
+					$('#btn-top').css('opacity',0);
+				}
+				if(scrollY>3500){
+					$('#btn-top').css('bottom','150px');
+				} else {
+					$('#btn-top').css('bottom','50px');
+				}
+			});
+			$('#btn-top').click(function(){
+				$('html,body').animate({scrollTop:0},1000);
+			});
+			$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
 		});
   </script>
   </head>
@@ -48,32 +76,32 @@
 				<div id="gnb-wrap">
 					<nav>
 						<ul>
-							<li><a href="#">상업공간</a> <!-- class="animate fadeInUp animated" -->
+							<li><a href="#">Retail</a> <!-- class="animate fadeInUp animated" -->
 								<div class="gnb-w-1">
 									<ul>
-										<li><a href="#">HJ빌딩 리모델링</a></li>
+										<li><a href="#">HJ빌딩리모델링</a></li>
 										<li><a href="#">다이닝 1498</a></li>
 										<li><a href="#">함흥본가면옥</a></li>
-										<li><a href="#">밴브루 스타필드</a></li>
+										<li><a href="#">밴브루스타필드</a></li>
 										<li><a href="#">쿤 - 부산</a></li>
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">주거공간</a>
+							<li><a href="#">Living</a>
 								<div class="gnb-w-1">
 									<ul>
 										<li><a href="#">피엔폴루스</a></li>
-										<li><a href="#">펜타포트 아파트</a></li>
+										<li><a href="#">펜타포트아파트</a></li>
 										<li><a href="#">뷰하우스</a></li>
 										<li><a href="#">용산파크타워</a></li>
 										<li><a href="#">비앤비스튜디오</a></li>
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">의료공간</a>
+							<li><a href="#">Medical</a>
 								<div class="gnb-w-1">
 									<ul>
-										<li><a href="#">유앤장 내과</a></li>
+										<li><a href="#">유앤장내과</a></li>
 										<li><a href="#">유안정형외과</a></li>
 										<li><a href="#">결 클리닉</a></li>
 										<li><a href="#">하루에치과 분점</a></li>
@@ -81,10 +109,10 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">업무공간</a>
+							<li><a href="#">Office</a>
 								<div class="gnb-w-1">
 									<ul>
-										<li><a href="#">현대스위스 은행</a></li>
+										<li><a href="#">현대스위스은행</a></li>
 										<li><a href="#">비앤비스튜디오</a></li>
 										<li><a href="#">엘타워</a></li>
 										<li><a href="#">로얄앤컴퍼니</a></li>
@@ -92,13 +120,13 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#">전시공간</a>
+							<li><a href="#">Exhibit</a>
 								<div class="gnb-w-1">
 									<ul>
 										<li><a href="#">갤러리목간</a></li>
 										<li><a href="#">에스갤러리</a></li>
 										<li><a href="#">세븐럭카지노</a></li>
-										<li><a href="#">태백고생대박물관</a></li>
+										<li><a href="#">고생대박물관</a></li>
 										<li><a href="#">STX 홍보전시관</a></li>
 									</ul>
 								</div>
@@ -117,9 +145,9 @@
 				<li>
 					<img src="images/main/main-visual-1-1.jpg" alt="PIE’N POLUS lobby">
 					<a href="#">
-						<div>
-							<strong class="fadeInRight animated delay- .5s">THE BEST<br>INTERIOR DESIGNS<br>IN TRENDY</strong>
-							<p class="mv-1 fadeInRight animated delay- .5s">시공사례보기</p>
+						<div class="move">
+							<strong>THE BEST<br>INTERIOR DESIGNS<br>IN TRENDY</strong>
+							<p class="mv-1 fadeInRight animated delay-.5s">시공사례보기</p>
 							<p class="mv-2 fadeInUp animated delay-1s">PORTFOLIO</p>
 						</div>
 					</a>
@@ -127,7 +155,7 @@
 				<li>
 					<img src="images/main/main-visual-2-1.jpg" alt="IDAS">
 					<a href="#">
-						<div>
+						<div class="move">
 							<strong>BEYOND<br>DESIGNING<br>SPACE</strong>
 							<p class="mv-1">시공사례보기</p>
 							<p class="mv-2">PORTFOLIO</p>
@@ -137,7 +165,7 @@
 				<li>
 					<img src="images/main/main-visual-3-1.jpg" alt="KOON Cafe in Haewundae">
 					<a href="#">
-						<div>
+						<div class="move">
 							<strong>BASED ON<br>HONEST &amp;<br>SYSTEMATIC</strong>
 							<p class="mv-1">시공사례보기</p>
 							<p class="mv-2">PORTFOLIO</p>
@@ -147,7 +175,7 @@
 				<li>
 					<img src="images/main/main-visual-4-1.jpg" alt="S-GALLERY">
 					<a href="#">
-						<div>
+						<div class="move">
 							<strong>THE SPACE<br>WITH<br>LOVE &amp; LIFE</strong>
 							<p class="mv-1">시공사례보기</p>
 							<p class="mv-2">PORTFOLIO</p>
@@ -222,67 +250,98 @@
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-1.jpg" alt="거주공간1">
-								<div><span>PIE’N POLUS<br>Residence</span></div>
+								<div>
+									<span>PIE’N POLUS<br>Residence<br></span>
+									<span>피엔폴루스 레지던스</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-2.jpg" alt="거주공간2">
-								<div><span>PENTAPORT APARTMENT</span></div>
+								<div>
+									<span>PENTAPORT APARTMENT</span>
+									<span>펜타포트 주상복합아파트</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-3.jpg" alt="거주공간3">
-								<div><span>View House</span></div>
+								<div>
+									<span>View House</span>
+									<span><br>뷰하우스</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-4.jpg" alt="거주공간4">
-								<div><span>PIE’N POLUS<br>residence deco</span></div>
+								<div>
+									<span>PIE’N POLUS<br>residence deco</span>
+									<span>피엔폴루스</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-5.jpg" alt="거주공간5">
-								<div><span>PARK TOWER</span></div>
+								<div>
+									<span>PARK TOWER</span>
+									<span><br>용산파크타워</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-6.jpg" alt="거주공간6">
-								<div><span>SHINNASEOUL<br>beauty & care center</span></div>
+								<div>
+									<span>SHINNASEOUL<br>beauty & care center</span>
+									<span>신나서울회복센타</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-7.jpg" alt="거주공간7">
-								<div><span>Y APARTMENT</span></div>
+								<div>
+									<span>Y APARTMENT</span>
+									<span><br>Y 아파트</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-8.jpg" alt="거주공간8">
-								<div><span>REMIAN APARTMENT<br>seocho-dong</span></div>
+								<div>
+									<span>REMIAN APARTMENT<br>seocho-dong</span>
+									<span>레미안아파트</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-9.jpg" alt="거주공간9">
-								<div><span>JEJU HIGHLAND</span></div>
+								<div>
+									<span>JEJU HIGHLAND</span>
+									<span><br>제주하이랜드</span>
+								</div>
 							</a>
 						</li>
 						<li>
 							<a href="#">
 								<img src="images/main/main-end-10.jpg" alt="거주공간10">
-								<div><span>SOMERSET PALACE</span></div>
+								<div>
+									<span>SOMERSET PALACE</span>
+									<span><br>서머셋팰리스</span>
+								</div>
 							</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
+		<button id="btn-top">위로</button>
 	</div>
 <!-- //container -->
 <!-- footer -->
@@ -299,7 +358,6 @@
 				<h4>Follow Us</h4>
 				<ul>
 					<li><a href="#"><img src="images/common/facebook-logo.png" alt="페이스북"></a></li>
-					<li><a href="#"><img src="images/common/twitter.png" alt="트위터"></a></li>
 					<li><a href="#"><img src="images/common/instagram.png" alt="인스타그램"></a></li>
 				</ul>
 			</div>
