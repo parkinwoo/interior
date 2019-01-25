@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <meta name="viewport" content="width=device-width">
+  <title>Document</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/sub01.css">
+	<script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.97074.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".gnb-w-1").hide();
+			$("#gnb-wrap > nav > ul > li").hover(function(){
+				var i = $(this).index();
+				$("#gnb-wrap > nav > ul > li > div").eq(i).stop().slideDown();
+			},function(){
+				$("#gnb-wrap > nav > ul > li > div").stop().slideUp();
+			});
+			$(".tab-wrap-11").bxSlider({
+			});
+			$(".radio-wrap-1").eq(0).css({"z-index":"1"});
+			$("#tab-btn-1 + label").css({"background":"#ffba00"});
+			$(".radio-wrap-1 label").click(function(){
+				$(".radio-wrap-1").css("z-index","0");
+				$(".radio-wrap-1 label").css({"background":"#ccc"});
+				$(this).parent().css({"z-index":"1"});
+				$(this).css({"background":"#ffba00"});
+			});
+		});
+  </script>
+  </head>
+ <body>
+<!-- header -->
+	<header id="header">
+		<p class="skipmenu"><a href="#container">본문바로가기</a></p>
+		<div id="header-wrap">
+			<div id="header-wrap-2">
+				<h1><a href="index.html">IDAS</a></h1>
+				<div id="gnb-wrap">
+					<nav>
+						<ul>
+							<li><a href="sum01.html">Retail</a> <!-- class="animate fadeInUp animated" -->
+								<div class="gnb-w-1">
+									<ul>
+										<li><a href="sum01.html">다이닝 1498</a></li>
+										<li><a href="sum01.html">함흥본가면옥</a></li>
+										<li><a href="sum01.html">밴브루스타필드</a></li>
+										<li><a href="sum01.html">쿤 - 부산</a></li>
+										<li><a href="sum01.html">쿤 - AK프라자</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Living</a>
+								<div class="gnb-w-1">
+									<ul>
+										<li><a href="#">피엔폴루스</a></li>
+										<li><a href="#">펜타포트아파트</a></li>
+										<li><a href="#">뷰하우스</a></li>
+										<li><a href="#">용산파크타워</a></li>
+										<li><a href="#">비앤비스튜디오</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Medical</a>
+								<div class="gnb-w-1">
+									<ul>
+										<li><a href="#">유앤장내과</a></li>
+										<li><a href="#">유안정형외과</a></li>
+										<li><a href="#">결 클리닉</a></li>
+										<li><a href="#">하루에치과 분점</a></li>
+										<li><a href="#">투명치과빌딩</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Office</a>
+								<div class="gnb-w-1">
+									<ul>
+										<li><a href="#">현대스위스은행</a></li>
+										<li><a href="#">비앤비스튜디오</a></li>
+										<li><a href="#">엘타워</a></li>
+										<li><a href="#">로얄앤컴퍼니</a></li>
+										<li><a href="#">엔에이치엔</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">Exhibit</a>
+								<div class="gnb-w-1">
+									<ul>
+										<li><a href="#">갤러리목간</a></li>
+										<li><a href="#">에스갤러리</a></li>
+										<li><a href="#">세븐럭카지노</a></li>
+										<li><a href="#">고생대박물관</a></li>
+										<li><a href="#">STX 홍보전시관</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+<!-- //header -->
+	<div id="container">
+		<div id="sub01-wrap">
+			<div id="sc-1">
+				<div class="sw-l">
+					<h2>PORTFOLIO</h2>
+					<h3>THINKING IS REAL, IDAS</h3>
+					<p>공간 안에 정의된 모든 것들을 하나로 묶어 완벽한 공간의 완성을 목표로 상상하는 모든 것들을 현실에서 만날 수 있도록 최선을 다할 것입니다.</p>
+				</div>
+				<img src="images/sub01/sub-main01.jpg" alt="KOON choengdam building">
+			</div>
+			<div id="sc-2">
+				<h3>PORTFOLIO</h3>
+				<div id="radio-a">
+					<div class="radio-wrap-1">
+						<input type="radio" name="tab-btn" id="tab-btn-1" class="blind" checked><label for="tab-btn-1">다이닝1498</label>
+						<div class="tab-wrap-1 a">
+							<ul class="tab-wrap-11">
+								<li><a href="#"><img src="images/sub01/sub-main1-1.jpg" alt="DINING 1498 Restaurant"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main1-2.jpg" alt="DINING 1498 Restaurant"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main1-3.jpg" alt="DINING 1498 Restaurant"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main1-4.jpg" alt="DINING 1498 Restaurant"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main1-5.jpg" alt="DINING 1498 Restaurant"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main1-6.jpg" alt="DINING 1498 Restaurant"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="radio-wrap-1">
+						<input type="radio" name="tab-btn-2" id="tab-btn-2" class="blind" checked><label for="tab-btn-2">함흥본가면옥</label>
+						<div class="tab-wrap-2 a">
+							<ul class="tab-wrap-11">
+								<li><a href="#"><img src="images/sub01/sub-main2-1.jpg" alt="HAMHEUNG Original Korean"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main2-2.jpg" alt="HAMHEUNG Original Korean"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main2-3.jpg" alt="HAMHEUNG Original Korean"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main2-4.jpg" alt="HAMHEUNG Original Korean"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main2-5.jpg" alt="HAMHEUNG Original Korean"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main2-6.jpg" alt="HAMHEUNG Original Korean"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="radio-wrap-1">
+						<input type="radio" name="tab-btn" id="tab-btn-3" class="blind"><label for="tab-btn-3">밴브루스타필드</label>
+						<div class="tab-wrap-3 a">
+							<ul class="tab-wrap-11">
+								<li><a href="#"><img src="images/sub01/sub-main3-1.jpg" alt=""></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main3-2.jpg" alt=""></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main3-3.jpg" alt=""></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main3-4.jpg" alt=""></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="radio-wrap-1">
+						<input type="radio" name="tab-btn" id="tab-btn-4" class="blind"><label for="tab-btn-4">쿤 - 부산</label>
+						<div class="tab-wrap-4 a">
+							<ul class="tab-wrap-11">
+								<li><a href="#"><img src="images/sub01/sub-main4-1.jpg" alt="Vanbrough Fashion Shop"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main4-2.jpg" alt="Vanbrough Fashion Shop"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main4-3.jpg" alt="Vanbrough Fashion Shop"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="radio-wrap-1">
+						<input type="radio" name="tab-btn" id="tab-btn-5" class="blind"><label for="tab-btn-5">쿤 - AK프라자</label>
+						<div class="tab-wrap-5 a">
+							<ul class="tab-wrap-11">
+								<li><a href="#"><img src="images/sub01/sub-main5-1.jpg" alt="Vanbrough Fashion Shop"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main5-2.jpg" alt="Vanbrough Fashion Shop"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main5-3.jpg" alt="Vanbrough Fashion Shop"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main5-4.jpg" alt="Vanbrough Fashion Shop"></a></li>
+								<li><a href="#"><img src="images/sub01/sub-main5-5.jpg" alt="Vanbrough Fashion Shop"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- footer -->
+	<div id="footer">
+		<div id="footer-wrap">
+			<h3>IDAS</h3>
+			<div class="footer-c">
+				<h4>(주)이다스건축사사무소</h4>
+				<address>06004 서울특별시 강남구 도산대로 68길 26(청담동18-34) IDAS 빌딩1F,2F</address>
+				<p>26, Dosan-daero 68-gil, Gangnam-gu, Seoul, 06064, Rep. of KOREA</p>
+				<p>WORKING TIME <br>- am 09:00 ~ pm 07:00 <br>- 월~금 | Mon to Fri</p>
+			</div>
+			<div class="sns">
+				<h4>Follow Us</h4>
+				<ul>
+					<li><a href="#"><img src="images/common/facebook-logo.png" alt="페이스북"></a></li>
+					<li><a href="#"><img src="images/common/instagram.png" alt="인스타그램"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+ </body>
+</html>
+
