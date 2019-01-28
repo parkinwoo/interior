@@ -10,7 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <meta name="viewport" content="width=device-width">
-  <title>Document</title>
+  <title>Medical</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/sub01.css">
@@ -30,7 +30,7 @@
 			$("#tab-btn-1 + label").css({"background":"#ffba00"});
 			$(".radio-wrap-1 label").click(function(){
 				$(".radio-wrap-1 .a").hide();
-				$(this).next().show(1000);
+				$(this).next().show();
 				$(".radio-wrap-1 label").css({"background":"#ccc"});
 				$(this).css({"background":"#ffba00"});
 			});
@@ -128,7 +128,7 @@
 				<img src="images/sub03/sub-main01.jpg" alt="KOON choengdam building">
 			</div>
 			<div id="sc-2">
-				<h3>PORTFOLIO</h3>
+				<h3>Medical</h3>
 				<div id="radio-a">
 					<div class="radio-wrap-1">
 						<input type="radio" name="tab-btn" id="tab-btn-1" class="blind" checked><label for="tab-btn-1">엠제이피부과</label>
