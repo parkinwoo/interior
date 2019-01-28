@@ -25,9 +25,9 @@
 #content-wrap .ct-3{border-bottom: 1px solid #ccc; padding-bottom: 60px;}
 #content-wrap .text-box h2{font-size: 50px; margin-top: 260px; margin-bottom: 20px;}
 #content-wrap .text-box h3{font-size: 30px; margin-bottom: 20px;}
-#content-wrap .text-box p{font-size: 15px; padding-bottom: 20px;}
-#content-wrap .text-box button{font-size: 15px; padding: 10px; border: 1px solid #ccc;}
-#content-wrap .text-box button:hover{color: #000; background-color: white; border: 1px solid #ccc;}
+#content-wrap .text-box p{font-size: 15px; padding-bottom: 30px;}
+#content-wrap .text-box a{background: darkgray; font-size: 15px; padding: 10px; border: 1px solid #ccc;}
+#content-wrap .text-box a:hover{color: #000; background-color: white; border: 1px solid #ccc;}
 #content-wrap-2{max-width: 1200px; margin: 0 auto;}
 #content-wrap-2 .ct-w{text-align: center; margin-bottom: 60px;}
 #content-wrap-2 .ct-w > ul:after{content:""; display: block; clear: both;}
