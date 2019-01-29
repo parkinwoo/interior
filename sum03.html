@@ -42,6 +42,11 @@
 					$("#header-wrap").slideDown(300);
 				}
 			});
+			$(".gnb-btn").click(function(){
+					$(this).toggleClass("on");
+					$("#gnb-wrap > nav").toggleClass("on");
+					$(".gnb-bg").toggleClass("on");
+			});
 		});
   </script>
   </head>
@@ -53,6 +58,7 @@
 			<div id="header-wrap-2">
 				<h1><a href="index.html">IDAS</a></h1>
 				<div id="gnb-wrap">
+					<button class="gnb-btn"></button>
 					<nav>
 						<ul>
 							<li><a href="sum01.html">Retail</a> <!-- class="animate fadeInUp animated" -->
@@ -116,6 +122,7 @@
 			</div>
 		</div>
 	</header>
+<div class="gnb-bg"></div>
 <!-- //header -->
 	<div id="container">
 		<div id="sub01-wrap">
