@@ -78,6 +78,7 @@
 	#content-wrap-3 .ins-l p{ margin-bottom: 15px;}
 	#content-wrap-3 .ins-l p:after{content:none;}
 	#content-wrap-3 .ins-r{margin: 0 auto; max-width: 1005px; float: none;}
+	#btn-top{width: 0; height: 0;}
 }
 @media (max-width: 1022px){
 	#visual-slider-list{padding-top: 96px;}
@@ -114,4 +115,5 @@
 	#content-wrap-3 .ins-r{max-width: 278px;}
 	#content-wrap-3 .ins-r > ul > li.dn{display: none;}
 	#content-wrap-3 .ins-r > ul > li > a > img{ width: 250px; height: 225px;}
+	#content-wrap-3 .ins-r > ul > li > a > div > span{padding-bottom: 160px;}
 }

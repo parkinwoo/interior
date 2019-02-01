@@ -47,14 +47,14 @@
 			$(window).on("scroll",function(){
 				var scrollY = window.pageYOffset;
 				console.log(scrollY);
-				if(scrollY>800){
+				if(scrollY>600){
 					$("#btn-top").fadeIn();
 					$("#btn-top").css("opacity",1);
 				}else{
 					$("#btn-top").fadeOut();
 					$("#btn-top").css("opacity",0);
 				}
-				if(scrollY>3200){
+				if(scrollY>3000){
 					$("#btn-top").css("bottom","150px");
 				} else {
 					$("#btn-top").css("bottom","50px");
@@ -268,7 +268,7 @@
 							<a href="#">
 								<img src="images/main/main-end-2.jpg" alt="Living Design2">
 								<div>
-									<span>PENTAPORT APARTMENT</span>
+									<span>PENTAPORT<br>APARTMENT</span>
 									<span>펜타포트 주상복합아파트</span>
 								</div>
 							</a>
