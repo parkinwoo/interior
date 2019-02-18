@@ -28,6 +28,8 @@
 			});
 			$(".radio-wrap-1:first-child").css({"z-index":1});
 			$("#tab-btn-1 + label").css({"background":"#ffba00"});
+			$(".radio-wrap-1 .a").hide();
+			$(".radio-wrap-1").eq(0).child.show();
 			$(".radio-wrap-1 label").click(function(){
 				$(".radio-wrap-1 .a").hide();
 				$(this).next().show();
